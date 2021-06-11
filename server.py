@@ -7,11 +7,7 @@ def show_form():
 
 @ app.route('/result', methods=['POST'])
 def result():
-    request.form['name']
-    location_from_form = request.form['location']
-    language_from_form = request.form['language']
-    comment_from_form = request.form['comment']
-    return render_template("result.html", name_on_template=request.form['name'], language_on_template=request.form['location'], location_on_template=request.form['location'], comment_on_template=comment_from_form,)
+    return render_template("result.html", name_on_template=request.form['name'], language_on_template=request.form['language'], location_on_template=request.form['location'], comment_on_template=request.form['comment'])
 
 
 if __name__ == "__main__":
